@@ -1,4 +1,5 @@
 import logo from './linkedin.jpg';
+import git from './github.png';
 import './App.css';
 import Nom from './components/nom';
 import Lien from './components/lien';
@@ -67,6 +68,12 @@ function App() {
 
       <CentreInteret
       nom = 'Nouvelles technologies'
+      />
+
+      <Lien
+      nom='GitHub'
+      img={git}
+      lien='https://github.com/ermelindo-mendes/'
       />
 
 
