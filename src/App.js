@@ -1,23 +1,75 @@
-import logo from './logo.svg';
+import logo from './linkedin.jpg';
 import './App.css';
+import Nom from './components/nom';
+import Lien from './components/lien';
+import Diplomes from './components/diplomes';
+import Competences from './components/competences';
+import CentreInteret from './components/centreInteret';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nom
+      nom='Mendes Lopes '
+      prenom='Ermelindo '
+      poste='Assistant développement & support'
+      />
+       <Lien
+      nom='Linkedin'
+      img={logo}
+      lien='https://www.linkedin.com/in/ermelindo-mendes-lopes-506a8121b/'
+      />
+      <h3>Diplomes</h3>
+      <Diplomes
+      nom='BTS SIO SLAM'
+      />
+
+      <Diplomes
+      nom='Bac Pro Elec'
+      />
+
+      <h3>Competences</h3>
+
+      <Competences
+      nom = 'PHP'
+      niveau='Debutant'
+      />
+
+      <Competences
+      nom = 'Node js'
+      niveau='Debutant'
+      />
+
+      <Competences
+      nom = 'HTML/CSS'
+      niveau='Debutant'
+      />
+
+      <Competences
+      nom = 'Symfony'
+      niveau='Debutant'
+      />
+
+      <Competences
+      nom = 'Python'
+      niveau='Debutant'
+      />
+
+      <h3>Centre d'intérêt</h3>
+
+      <CentreInteret
+      nom = 'Mangas'
+      />
+
+      <CentreInteret
+      nom = 'Jeux videos'
+      />
+
+      <CentreInteret
+      nom = 'Nouvelles technologies'
+      />
+
+
     </div>
   );
 }
