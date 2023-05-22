@@ -12,7 +12,7 @@ import CentreInteret from './components/centreInteret';
 import Projet from './components/projet';
 
 const liens = [
-  { id: 1, nom: 'BTS SIO SLAM', url: 'https://www.linkedin.com/in/ermelindo-mendes-lopes-506a8121b/', img: logo },
+  { id: 1, nom: 'Linkedin', url: 'https://www.linkedin.com/in/ermelindo-mendes-lopes-506a8121b/', img: logo },
   { id: 2, nom: 'GitHub', url: 'https://github.com/ermelindo-mendes/', img: git },
 ]
 
