@@ -1,11 +1,47 @@
 import logo from './linkedin.jpg';
 import git from './github.png';
+import devops from './Devops.svg';
+import projetApi from './projet-api.gif'
+import backoffice from './backOffice.jpg'
 import './App.css';
 import Nom from './components/nom';
 import Lien from './components/lien';
 import Diplomes from './components/diplomes';
 import Competences from './components/competences';
 import CentreInteret from './components/centreInteret';
+import Projet from './components/projet';
+
+const liens = [
+  { id: 1, nom: 'BTS SIO SLAM', url: 'https://www.linkedin.com/in/ermelindo-mendes-lopes-506a8121b/', img: logo },
+  { id: 2, nom: 'GitHub', url: 'https://github.com/ermelindo-mendes/', img: git },
+]
+
+const diplomes = [
+  { id: 1, nom: 'BTS SIO SLAM' },
+  { id: 2, nom: 'Bac Pro Elec' },
+]
+
+const centreDinterets = [
+  { id: 1, nom: 'Mangas' },
+  { id: 2, nom: 'Jeux Videos' },
+  { id: 2, nom: 'Nouvelles technologies' },
+]
+
+const competences = [
+  { id: 1, nom: 'PHP', niv: 'Debutant' },
+  { id: 2, nom: 'Node Js', niv: 'Debutant' },
+  { id: 3, nom: 'Symfony', niv: 'Debutant' },
+  { id: 4, nom: 'Python', niv: 'Debutant' },
+  
+]
+
+const projets = [
+  { id: 1, nom: 'Projet Devops', url: 'https://github.com/zbrwkq/projet-Devops', img: devops },
+  { id: 2, nom: 'Projet Api JS', url: 'https://exemple.com/projet2', img: projetApi },
+  { id: 3, nom: 'Projet back office', url: 'https://github.com/ermelindo-mendes/Back_office', img: backoffice },
+]
+
+
 
 function App() {
   return (
@@ -15,66 +51,39 @@ function App() {
       prenom='Ermelindo '
       poste='Assistant développement & support'
       />
-       <Lien
-      nom='Linkedin'
-      img={logo}
-      lien='https://www.linkedin.com/in/ermelindo-mendes-lopes-506a8121b/'
-      />
-      <h3>Diplomes</h3>
-      <Diplomes
-      nom='BTS SIO SLAM'
-      />
 
-      <Diplomes
-      nom='Bac Pro Elec'
-      />
+      {liens.map((data) => (
+                    <Lien key={data.id} nom={data.nom} img={data.img} lien={data.url} />
+                ))}
+
+      
+
+      <h3>Diplomes</h3>
+
+      {diplomes.map((data) => (
+                    <Diplomes key={data.id} nom={data.nom} />
+                ))}
 
       <h3>Competences</h3>
 
-      <Competences
-      nom = 'PHP'
-      niveau='Debutant'
-      />
+      {competences.map((data) => (
+                    <Competences key={data.id} nom={data.nom} niveau={data.niv} />
+                ))}
 
-      <Competences
-      nom = 'Node js'
-      niveau='Debutant'
-      />
+      
 
-      <Competences
-      nom = 'HTML/CSS'
-      niveau='Debutant'
-      />
+      <h3>Centre d&apos;intérêt</h3>
 
-      <Competences
-      nom = 'Symfony'
-      niveau='Debutant'
-      />
 
-      <Competences
-      nom = 'Python'
-      niveau='Debutant'
-      />
+      {centreDinterets.map((data) => (
+                    <CentreInteret key={data.id} nom={data.nom} />
+                ))} 
 
-      <h3>Centre d'intérêt</h3>
+      <h3>Projets</h3>
 
-      <CentreInteret
-      nom = 'Mangas'
-      />
-
-      <CentreInteret
-      nom = 'Jeux videos'
-      />
-
-      <CentreInteret
-      nom = 'Nouvelles technologies'
-      />
-
-      <Lien
-      nom='GitHub'
-      img={git}
-      lien='https://github.com/ermelindo-mendes/'
-      />
+      {projets.map((data) => (
+                    <Projet key={data.id} nom={data.nom} img={data.img} lien={data.url} />
+                ))}
 
 
     </div>
