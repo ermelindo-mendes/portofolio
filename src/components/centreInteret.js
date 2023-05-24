@@ -1,9 +1,9 @@
-const CentreInteret = ({nom}) => {
+const CentreInteret = ({ nom }) => {
     return (
-        <>  
-            <p> {nom} </p> 
+        <>
+            <p> {nom} </p>
         </>
     )
 }
 
-export default CentreInteret;
+export default CentreInteret

@@ -1,18 +1,29 @@
-const Layout = () => {
+import { Link } from 'react-router-dom'
+
+const Layout = ({ children }) => {
     return (
         <>
-        <header>
-            <p>Je suis un header</p>
-        </header>
+            <header>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to='/'> Acceuil </Link>
+                        </li>
+                        <li>
+                            <Link to='/about'> À propos </Link>
+                        </li>
+                        <li>
+                            <Link to='/projets'> Mes Projets </Link>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-        <main>
-            <p>Je suis le conteneur</p>
-        </main>
+            <main>{children}</main>
 
-        <footer>Ermelindo Mendes Lopes</footer>
-
+            <footer>Ermelindo Mendes Lopes 2023</footer>
         </>
     )
 }
 
-export default Layout;
+export default Layout

@@ -1,10 +1,12 @@
-const Competences = ({nom, niveau}) => {
+const Competences = ({ nom, niveau }) => {
     return (
-        <>  
-            <p> {nom} : {niveau} </p> 
-            
+        <>
+            <p>
+                {' '}
+                {nom} : {niveau}{' '}
+            </p>
         </>
     )
 }
 
-export default Competences;
+export default Competences

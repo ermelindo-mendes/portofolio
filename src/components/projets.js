@@ -1,9 +1,8 @@
-const Projet = ({ nom, img, lien, description }) => {
+const Projets = ({ nom, img, lien }) => {
     return (
         <>
             <h2> {nom} </h2>
             <img src={img} alt={nom} style={{ width: '200px', height: 'auto' }} />
-            <p>{description}</p>
             <a href={lien} title={nom} target='_blank' rel='noreferrer'>
                 Redirection vers le projet
             </a>
@@ -11,4 +10,4 @@ const Projet = ({ nom, img, lien, description }) => {
     )
 }
 
-export default Projet
+export default Projets

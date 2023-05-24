@@ -1,9 +1,9 @@
-const Diplomes = ({nom}) => {
+const Diplomes = ({ nom }) => {
     return (
-        <>  
-            <p> {nom} </p> 
+        <>
+            <p> {nom} </p>
         </>
     )
 }
 
-export default Diplomes;
+export default Diplomes
